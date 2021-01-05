@@ -23,6 +23,7 @@ export class DashboardComponent {
   TeamMembers: any[] = [];
   SelectedProject: string;
   SelectedYear: number;
+  ToDay: Date;
 
   constructor() {
     this.Designation = "Technical Lead";
@@ -30,7 +31,7 @@ export class DashboardComponent {
     this.NoOfTeamMembers = 10;
     this.TotalCostOfAllProjects = 240000;
     this.PendingTasks = 10;
-    this.UpComingProjects = 2;
+    this.UpComingProjects = 0.2;
     this.ProjectCost = 230000
     this.CurrentExpenditure = 200;
     this.AvailableFunds = 150000;
@@ -41,6 +42,7 @@ export class DashboardComponent {
     this.bindTeamMembersSummary();
     this.bindTeamMembers();
     this.SelectedYear = this.Years[0];
+    this.ToDay = new Date();
     //this.onProjectChange(this);
 }
 
